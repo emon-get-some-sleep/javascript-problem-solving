@@ -24,3 +24,31 @@ const sumPositive = arr => {
 }   
 
 // console.log(sumPositive([2, -5, 10, -3, 7]));
+
+// task 3 lets find the most frequent  number in an array 
+
+const findFrequent = arr => {
+    // first we will store all the numbers in a key value pair
+    const storeNumber = {};
+    for(let i of arr){
+        if(storeNumber[i] == undefined){
+            storeNumber[i] = 1;
+        }
+        else {
+            storeNumber[i]++;
+        }
+    }
+
+    // now let's find the most frequent number
+    let result;
+    let mostFrequentNumber = 0;
+    for(let i in storeNumber){
+        if(storeNumber[i] > mostFrequentNumber){
+            mostFrequentNumber = storeNumber[i];
+            result = i;
+        }
+    }
+    return result;
+}
+
+console.log(findFrequent([3, 5, 2, 5, 3, 3, 1, 4, 5]));
