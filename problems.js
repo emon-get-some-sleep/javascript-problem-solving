@@ -68,4 +68,28 @@ const findIndices = (arr, target) => {
     
 }
 
-console.log(findIndices([1, 3, 6, 8, 11, 15], 11));
+// console.log(findIndices([1, 3, 6, 8, 11, 15], 11));
+
+// task 5 : making a simple calculator in javascript 
+
+const calculator = (num1, num2, operator) => {
+    switch(operator){
+        case '+':
+            return num1 + num2;
+        case '-':
+            return num1 - num2;
+        case '*':
+            return num1 * num2;
+        case '/':
+            if(num1 == 0 || num2 == 0){
+                return "Division by Zero is not possible"
+            }
+            else{
+                return num1 / num2;
+            }
+        default:
+            return 'Please check your input again';
+    }
+}
+
+// console.log(calculator(5, 5, '-'))
