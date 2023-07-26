@@ -51,4 +51,21 @@ const findFrequent = arr => {
     return result;
 }
 
-console.log(findFrequent([3, 5, 2, 5, 3, 3, 1, 4, 5]));
+// console.log(findFrequent([3, 5, 2, 5, 3, 3, 1, 4, 5]));
+
+
+// task 4 : find the two indices of a target number 
+
+const findIndices = (arr, target) => {
+    
+        for(let i = 0; i < arr.length; i++){
+            for(let j = 1; j < arr.length; j++){
+                if(arr[i] + arr[j] == target){
+                    return [i, j]
+                }
+            }
+        }
+    
+}
+
+console.log(findIndices([1, 3, 6, 8, 11, 15], 11));
